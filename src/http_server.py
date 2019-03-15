@@ -4,6 +4,8 @@
 from aiohttp import web
 from src import handlers
 
-app = web.Application()
-app.add_routes(handlers.routes)
-web.run_app(app)
+
+def start_http_server():
+    app = web.Application()
+    app.add_routes(handlers.routes)
+    web.run_app(app)
