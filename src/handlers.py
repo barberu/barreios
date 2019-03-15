@@ -17,15 +17,15 @@ async def find_by_cep(request):
     return web.Response(text=text, content_type='application/json')
 
 
-@routes.get('/address/{uf}/{city}/street')
+@routes.get('/address/{uf}/{city}/{street}')
 async def find_by_cep(request):
     client = ClientSession()
-    code = request.match_info.get('uf')
+    uf = request.match_info.get('uf')
     city = request.match_info.get('city')
     street = request.match_info.get('street')
 
     async with client as session:
-        async with session.get('https://viacep.com.br/ws/%s/%s/%s/json' % (code, city, street)) as resp:
+        async with session.get('https://viacep.com.br/ws/%s/%s/%s/json' % (uf, city, street)) as resp:
             print(resp.status)
             text = await resp.text()
     return web.Response(text=text, content_type='application/json')
