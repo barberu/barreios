@@ -1,3 +1,7 @@
+"""
+  Request Handlers
+
+"""
 from aiohttp import web, ClientSession
 routes = web.RouteTableDef()
 

@@ -1,3 +1,6 @@
+"""
+  Http Server
+"""
 from aiohttp import web
 from src import handlers
 
