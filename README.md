@@ -16,22 +16,59 @@ Note: barreios uses [aiohttp](https://aiohttp.readthedocs.io/en/stable/) and req
 
 - #### Start the service via docker command
 
+Build the app
 ```bash
    docker build --tag=barreios-service .
 ```
+Run the app
+
+```bash
+   docker run -p 4000:80 barreios-service
+```
 
 - #### Get a cep by address
+Request
 ```http
 GET /address/RJ/Santa/29650000 HTTP/1.1
 Host: localhost
 ```
+Response 
+``` json
+{
+    "cep": "01001-000",
+    "logradouro": "Praça da Sé",
+    "complemento": "lado ímpar",
+    "bairro": "Sé",
+    "localidade": "São Paulo",
+    "uf": "SP",
+    "unidade": "",
+    "ibge": "3550308",
+    "gia": "1004"
+}
+```
 - #### Get an address by cep
-
+Request
 ```http
 GET /cep/01001000 HTTP/1.1
 Host: localhost
 Content-Type: application/json
 
+```
+Response
+```json
+ [
+    {
+        "cep": "28770-000",
+        "logradouro": "",
+        "complemento": "",
+        "bairro": "",
+        "localidade": "Santa Maria Madalena",
+        "uf": "RJ",
+        "unidade": "",
+        "ibge": "3304607",
+        "gia": ""
+    }
+ ]
 ```
 
 
