@@ -14,18 +14,18 @@ Note: barreios uses [aiohttp](https://aiohttp.readthedocs.io/en/stable/) and req
 
 ## Usage
 
-- #### start the service via docker command
+- #### Start the service via docker command
 
 ```bash
    docker build . --tag=barreios-service
 ```
 
-- #### get a cep by address
+- #### Get a cep by address
 ```http
 GET /address/RJ/Santa/29650000 HTTP/1.1
 Host: localhost
 ```
-- #### get an address by cep
+- #### Get an address by cep
 
 ```http
 GET /cep/01001000 HTTP/1.1
