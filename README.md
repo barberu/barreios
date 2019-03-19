@@ -23,7 +23,7 @@ Note: barreios uses [aiohttp](https://aiohttp.readthedocs.io/en/stable/) and req
 ###### Run the app
 
 ```bash
-   docker run -p 4000:80 barreios-service
+   sudo docker run -p 80:80 -d barreios-service
 ```
 
 - #### Get a cep by address
