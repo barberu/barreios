@@ -33,28 +33,7 @@ GET /address/RJ/Santa/29650000 HTTP/1.1
 Host: localhost
 ```
 Response 
-``` json
-{
-    "cep": "01001-000",
-    "logradouro": "Praça da Sé",
-    "complemento": "lado ímpar",
-    "bairro": "Sé",
-    "localidade": "São Paulo",
-    "uf": "SP",
-    "unidade": "",
-    "ibge": "3550308",
-    "gia": "1004"
-}
-```
-- #### Get an address by cep
-Request
-```http
-GET /cep/01001000 HTTP/1.1
-Host: localhost
-Content-Type: application/json
 
-```
-Response
 ```json
  [
     {
@@ -71,7 +50,28 @@ Response
  ]
 ```
 
+- #### Get an address by cep
+Request
+```http
+GET /cep/01001000 HTTP/1.1
+Host: localhost
+Content-Type: application/json
 
+```
+Response
+``` json
+{
+    "cep": "01001-000",
+    "logradouro": "Praça da Sé",
+    "complemento": "lado ímpar",
+    "bairro": "Sé",
+    "localidade": "São Paulo",
+    "uf": "SP",
+    "unidade": "",
+    "ibge": "3550308",
+    "gia": "1004"
+}
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
